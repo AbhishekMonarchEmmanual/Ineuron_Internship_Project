@@ -15,8 +15,8 @@ if __name__ == "__main__":
         
         if st.checkbox("Lets Train and create model"):
                 
-                model = load_object('model.pkl')
-                preprocessor  = load_object('preprocessor.pkl')
+                model = load_object('saved_models\model.pkl')
+                preprocessor  = load_object('saved_models\preprocessor.pkl')
                 df = pd.read_csv('airline.csv')
                 df= feature_eng(df_path='airline.csv', col= ["Arrival_Time",'Date_of_Journey',"Duration", "Dep_Time","Route", "Additional_Info"])
                 df = preprocessor.transform(df)

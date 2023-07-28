@@ -18,11 +18,37 @@ class Prediction_input:
         it will create the df that you want to predict the values after 
         training and creating our model 
         """
+
+        page_bg_img = f"""
+        <style>
+        [data-testid="stAppViewContainer"] > .main {{
+        background-image: url("https://images.unsplash.com/photo-1421789497144-f50500b5fcf0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGFpcmxpbmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=1000&q=60");
+        background-size: 180%;
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-attachment: local;
+        opacity:1
+        }}
+
+
+
+        [data-testid="stHeader"] {{
+        background: rgba(0,0,0,0);
+        }}
+
+        [data-testid="stToolbar"] {{
+        right: 2rem;
+        }}
+        </style>
+        """
+
+        st.markdown(page_bg_img, unsafe_allow_html=True)
+        st.title("AIRLINE FARE PRICE PREDICTION!")
+        st.sidebar.header("Configuration")
         if st.button("Terminate App", key="terminate_btn"):
             st.warning("Stopping the Streamlit app...")
             os._exit(0)
             
-        st.title("AIRLINE PRICE PREDICTION")        
         Date_of_Journey= st.text_input("Date_of_Journey plz choose year 2019 ex: '18/05/2019' format(DD/MM/YYYY)", key = "DATE",)
 ##############################################################     1
         Airline = st.selectbox(" Airline" , (list(["None",'Jet Airways','IndiGo','Air India','Multiple carriers','SpiceJet','Vistara','Air Asia','GoAir','Multiple carriers Premium economy','Jet Airways Business','Vistara Premium economy','Trujet'])), key = "AIRLINE")

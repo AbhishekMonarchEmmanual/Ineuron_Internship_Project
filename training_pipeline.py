@@ -39,9 +39,10 @@ class TrainingPipeLine:
 #                                                            model_trainer_config=model_trainer_config)
 #
 #           batch_prediction = BatchPrediction(batch_prediction_config=batch_prediction_config)
-#            batch = batch_prediction.initiate_batch_prediction()'''
+#            batch = batch_prediction.initiate_batch_prediction()
         except Exception as e:
             raise airlineException(e,sys)
         
 
+    
   

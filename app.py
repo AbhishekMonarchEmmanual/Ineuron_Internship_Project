@@ -17,10 +17,10 @@ if __name__ == "__main__":
                 
                 model = load_object('model.pkl')
                 preprocessor  = load_object('preprocessor.pkl')
-                input_feature_name = list(preprocessor.feature_names_in_)
+            
                 df = pd.read_csv('airline.csv')
                 df= feature_eng(df_path='airline.csv', col= ["Arrival_Time",'Date_of_Journey',"Duration", "Dep_Time","Route", "Additional_Info"])
-                df = preprocessor.transform(df[input_feature_name])
+                df = preprocessor.transform(df)
                 y_pred = model.predict(df)
                 st.write(y_pred)
                 

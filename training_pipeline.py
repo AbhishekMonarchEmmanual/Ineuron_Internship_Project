@@ -11,7 +11,7 @@ import os,sys
 class TrainingPipeLine:
     def __init__(self):
         pass
-    def intitate_training_pipeline():
+    def intitate_training_pipeline(self):
         try:
             training_pipeline = TrainingPipelineConfig()
             data_ingestion_config = DataIngestionConfig(training_pipeline_config=training_pipeline)
@@ -42,3 +42,6 @@ class TrainingPipeLine:
 #            batch = batch_prediction.initiate_batch_prediction()'''
         except Exception as e:
             raise airlineException(e,sys)
+        
+
+  

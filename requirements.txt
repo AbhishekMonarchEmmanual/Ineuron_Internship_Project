@@ -17,7 +17,7 @@ xgboost==1.6.2
 pandas
 PyYAML
 numpy
-scikit-learn==0.22
+scikit-learn==1.2.2
 apache-airflow
 streamlit
 -e .
